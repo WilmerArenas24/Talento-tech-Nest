@@ -33,7 +33,7 @@ export class UsersService {
 
   async delete(id: string): Promise<Boolean>{
  try {
-   this.userModel.findByIdAndDelete(id);
+   await this.userModel.findByIdAndDelete(id);
    return true;
   
  } catch (error) {
