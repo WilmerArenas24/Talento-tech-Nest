@@ -7,7 +7,9 @@ import { UsersService } from '../users.service';
 
 @ValidatorConstraint({ name: 'uniqueEmail', async: true })
 @Injectable()
+//implementacion de la interfaz
 export class UniqueEmailValidator implements ValidatorConstraintInterface {
+  //creando la instancia de usersService
   constructor(private readonly usersService: UsersService) {}
 
   async validate(email: string): Promise<boolean> {
