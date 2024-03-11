@@ -15,7 +15,7 @@ import {
     readonly id: string;
     @IsNotEmpty()
     @MinLength(3, { message: 'El nombre debe tener minimo 3 letras' })
-    @IsString({ message: 'Eyy pilas con el nombre' })
+    @IsString({ message: 'Revisa el nombre' })
     readonly name: string;
     readonly lastname: string;
     @IsNotEmpty()
