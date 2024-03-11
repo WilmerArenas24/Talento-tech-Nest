@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
-import { AuthController } from './auth/auth.controller';
+
 
 import * as dotenv from 'dotenv';
 
@@ -15,7 +15,7 @@ dotenv.config(); //Cargamos las variables de configuracion
     MongooseModule.forRoot(process.env.DB_URL),
 
   ],
-  controllers: [AppController, AuthController],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
