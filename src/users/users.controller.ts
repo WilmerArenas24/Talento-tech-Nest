@@ -41,7 +41,7 @@ export class UsersController {
   }
 
   @Delete(':id')
-  async delete(@Param('id') id: string): Promise<Boolean> {
+  async delete(@Param('id') id: string): Promise<boolean> {
     return this.usersService.delete(id);
   }
 }

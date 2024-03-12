@@ -4,19 +4,15 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { HousesController } from './houses/houses.controller';
-
+import { HousesService } from './houses/houses.service';
 
 import * as dotenv from 'dotenv';
 
 dotenv.config(); //Cargamos las variables de configuracion
 
 @Module({
-  imports: [
-    UsersModule,
-    MongooseModule.forRoot(process.env.DB_URL),
-
-  ],
+  imports: [UsersModule, MongooseModule.forRoot(process.env.DB_URL)],
   controllers: [AppController, HousesController],
-  providers: [AppService],
+  providers: [AppService, HousesService],
 })
 export class AppModule {}
